@@ -15,6 +15,23 @@
 		CEC6144D23DF32AD00D79A81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC6144B23DF32AD00D79A81 /* LaunchScreen.storyboard */; };
 		CEC6145823DF32AE00D79A81 /* AfricaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6145723DF32AE00D79A81 /* AfricaveTests.swift */; };
 		CEC6146323DF32AE00D79A81 /* AfricaveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6146223DF32AE00D79A81 /* AfricaveUITests.swift */; };
+		CEC6147123DF3E2900D79A81 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6147023DF3E2900D79A81 /* DesignableView.swift */; };
+		CEC6147323DF429C00D79A81 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6147223DF429C00D79A81 /* SignUpViewController.swift */; };
+		CEC6147523DF42C000D79A81 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6147423DF42C000D79A81 /* LoginViewController.swift */; };
+		CEC6147723DF42F500D79A81 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6147623DF42F500D79A81 /* HomeViewController.swift */; };
+		CEC6147A23DF5D4B00D79A81 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6147923DF5D4B00D79A81 /* Utilities.swift */; };
+		CEC6147D23DF812900D79A81 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6147C23DF812900D79A81 /* Client.swift */; };
+		CEC6148023DFA64700D79A81 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6147F23DFA64700D79A81 /* SignUpResponse.swift */; };
+		CEC6148423DFA88F00D79A81 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6148323DFA88F00D79A81 /* SignUpRequest.swift */; };
+		CEC6148623DFC61800D79A81 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6148523DFC61800D79A81 /* Constants.swift */; };
+		CEC6148823E038FB00D79A81 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6148723E038FB00D79A81 /* User.swift */; };
+		CEC6148A23E03EC000D79A81 /* AfricaveResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6148923E03EC000D79A81 /* AfricaveResponse.swift */; };
+		CEC6148D23E047D800D79A81 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6148C23E047D800D79A81 /* SignInRequest.swift */; };
+		CEC6148F23E0494500D79A81 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6148E23E0494500D79A81 /* SignInResponse.swift */; };
+		CEC6149123E0691500D79A81 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6149023E0691500D79A81 /* HomeTableViewCell.swift */; };
+		CEC6149423E069DB00D79A81 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6149323E069DB00D79A81 /* Posts.swift */; };
+		CEC6149623E069F100D79A81 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6149523E069F100D79A81 /* Post.swift */; };
+		CEC6149923E06F7400D79A81 /* PostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6149823E06F7400D79A81 /* PostsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +66,23 @@
 		CEC6145E23DF32AE00D79A81 /* AfricaveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AfricaveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC6146223DF32AE00D79A81 /* AfricaveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfricaveUITests.swift; sourceTree = "<group>"; };
 		CEC6146423DF32AE00D79A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEC6147023DF3E2900D79A81 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		CEC6147223DF429C00D79A81 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CEC6147423DF42C000D79A81 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CEC6147623DF42F500D79A81 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CEC6147923DF5D4B00D79A81 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		CEC6147C23DF812900D79A81 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		CEC6147F23DFA64700D79A81 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		CEC6148323DFA88F00D79A81 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		CEC6148523DFC61800D79A81 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CEC6148723E038FB00D79A81 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CEC6148923E03EC000D79A81 /* AfricaveResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfricaveResponse.swift; sourceTree = "<group>"; };
+		CEC6148C23E047D800D79A81 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
+		CEC6148E23E0494500D79A81 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
+		CEC6149023E0691500D79A81 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		CEC6149323E069DB00D79A81 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		CEC6149523E069F100D79A81 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		CEC6149823E06F7400D79A81 /* PostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +135,16 @@
 			children = (
 				CEC6144023DF32A900D79A81 /* AppDelegate.swift */,
 				CEC6144223DF32A900D79A81 /* SceneDelegate.swift */,
+				CEC6149723E06F3D00D79A81 /* Local Model */,
+				CEC6147B23DF5D5100D79A81 /* Helpers */,
 				CEC6144423DF32A900D79A81 /* ViewController.swift */,
+				CEC6147823DF42FA00D79A81 /* ViewController */,
 				CEC6144623DF32A900D79A81 /* Main.storyboard */,
 				CEC6144923DF32AD00D79A81 /* Assets.xcassets */,
 				CEC6144B23DF32AD00D79A81 /* LaunchScreen.storyboard */,
 				CEC6144E23DF32AD00D79A81 /* Info.plist */,
+				CEC6147E23DF813700D79A81 /* API SERVICE */,
+				CEC6148123DFA65200D79A81 /* Entity */,
 			);
 			path = Africave;
 			sourceTree = "<group>";
@@ -126,6 +165,82 @@
 				CEC6146423DF32AE00D79A81 /* Info.plist */,
 			);
 			path = AfricaveUITests;
+			sourceTree = "<group>";
+		};
+		CEC6147823DF42FA00D79A81 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CEC6147223DF429C00D79A81 /* SignUpViewController.swift */,
+				CEC6147423DF42C000D79A81 /* LoginViewController.swift */,
+				CEC6147623DF42F500D79A81 /* HomeViewController.swift */,
+				CEC6149023E0691500D79A81 /* HomeTableViewCell.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CEC6147B23DF5D5100D79A81 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CEC6148523DFC61800D79A81 /* Constants.swift */,
+				CEC6147923DF5D4B00D79A81 /* Utilities.swift */,
+				CEC6147023DF3E2900D79A81 /* DesignableView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CEC6147E23DF813700D79A81 /* API SERVICE */ = {
+			isa = PBXGroup;
+			children = (
+				CEC6147C23DF812900D79A81 /* Client.swift */,
+			);
+			path = "API SERVICE";
+			sourceTree = "<group>";
+		};
+		CEC6148123DFA65200D79A81 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CEC6149223E069A100D79A81 /* Post */,
+				CEC6148B23E0474700D79A81 /* SignIn */,
+				CEC6148223DFA83400D79A81 /* SignUP */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		CEC6148223DFA83400D79A81 /* SignUP */ = {
+			isa = PBXGroup;
+			children = (
+				CEC6147F23DFA64700D79A81 /* SignUpResponse.swift */,
+				CEC6148323DFA88F00D79A81 /* SignUpRequest.swift */,
+				CEC6148723E038FB00D79A81 /* User.swift */,
+				CEC6148923E03EC000D79A81 /* AfricaveResponse.swift */,
+			);
+			path = SignUP;
+			sourceTree = "<group>";
+		};
+		CEC6148B23E0474700D79A81 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				CEC6148C23E047D800D79A81 /* SignInRequest.swift */,
+				CEC6148E23E0494500D79A81 /* SignInResponse.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		CEC6149223E069A100D79A81 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				CEC6149323E069DB00D79A81 /* Posts.swift */,
+				CEC6149523E069F100D79A81 /* Post.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		CEC6149723E06F3D00D79A81 /* Local Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEC6149823E06F7400D79A81 /* PostsModel.swift */,
+			);
+			path = "Local Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +374,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC6148823E038FB00D79A81 /* User.swift in Sources */,
+				CEC6148D23E047D800D79A81 /* SignInRequest.swift in Sources */,
+				CEC6147523DF42C000D79A81 /* LoginViewController.swift in Sources */,
+				CEC6147123DF3E2900D79A81 /* DesignableView.swift in Sources */,
 				CEC6144523DF32A900D79A81 /* ViewController.swift in Sources */,
 				CEC6144123DF32A900D79A81 /* AppDelegate.swift in Sources */,
+				CEC6148F23E0494500D79A81 /* SignInResponse.swift in Sources */,
+				CEC6149423E069DB00D79A81 /* Posts.swift in Sources */,
 				CEC6144323DF32A900D79A81 /* SceneDelegate.swift in Sources */,
+				CEC6147723DF42F500D79A81 /* HomeViewController.swift in Sources */,
+				CEC6147A23DF5D4B00D79A81 /* Utilities.swift in Sources */,
+				CEC6147323DF429C00D79A81 /* SignUpViewController.swift in Sources */,
+				CEC6148423DFA88F00D79A81 /* SignUpRequest.swift in Sources */,
+				CEC6149923E06F7400D79A81 /* PostsModel.swift in Sources */,
+				CEC6148023DFA64700D79A81 /* SignUpResponse.swift in Sources */,
+				CEC6148A23E03EC000D79A81 /* AfricaveResponse.swift in Sources */,
+				CEC6149123E0691500D79A81 /* HomeTableViewCell.swift in Sources */,
+				CEC6149623E069F100D79A81 /* Post.swift in Sources */,
+				CEC6147D23DF812900D79A81 /* Client.swift in Sources */,
+				CEC6148623DFC61800D79A81 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
