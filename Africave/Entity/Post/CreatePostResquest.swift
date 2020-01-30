@@ -1,18 +1,17 @@
 //
-//  Post.swift
+//  CreatePostResquest.swift
 //  Africave
 //
-//  Created by user on 28/01/2020.
+//  Created by user on 30/01/2020.
 //  Copyright © 2020 Oladipupo Oluwatobi. All rights reserved.
 //
 
 import Foundation
 
-struct Post: Codable {
+struct CreatePostResquest: Codable {
     
-    let id: Int
     let title: String
-    let image: String
-    let User: User
+    let description: String
     let hashtags: String
+    
 }

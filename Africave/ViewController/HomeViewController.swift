@@ -12,12 +12,14 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var postTableView: UITableView!
     
+    var selectedIndex = 0
+    //var postArray =  PostsModel.postlist
+     let singleObj = SinglePostViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         _ = Client.getPost(completion: { (post, error) in
-            print(post)
-             PostsModel.postlist = post
+            PostsModel.postlist = post
              self.postTableView.reloadData()
         })
       
@@ -26,8 +28,21 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        //postTableView.reloadData()
+        postTableView.reloadData()
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showDetail" {
+            let detailVC = segue.destination as! SinglePostViewController
+            //detailVC.selected =  postArray[]
+            postTableView.reloadData()
+
+            
+        }
+    }
+
 
 
 }
@@ -40,24 +55,24 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return PostsModel.postlist.count
-        return 2
+        return PostsModel.postlist.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell") as! HomeTableViewCell
         
-        //let post = PostsModel.postlist[indexPath.row]
+        let post = PostsModel.postlist[indexPath.row]
+  
         
-        //cell.post =  post
-        //cell.setNeedsLayout()
+        cell.post =  post
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        selectedIndex = indexPath.row
-//        performSegue(withIdentifier: "showDetail", sender: nil)
-        tableView.deselectRow(at: indexPath, animated: true)
+
+            selectedIndex = indexPath.row
+            performSegue(withIdentifier: "showDetail", sender: nil)
+            tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

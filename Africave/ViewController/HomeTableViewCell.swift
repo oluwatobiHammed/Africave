@@ -10,32 +10,35 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var postImage: UIImageView!
-    //@IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     
     var post: Post! {
         didSet {
-            if let postImage = post.image{
-                if let posterPath = URL(string: postImage){
-                    
-                 DispatchQueue.global().async {
-                         let data = try? Data(contentsOf: posterPath)
-                         if let data = data {
-                              if  let image: UIImage = UIImage(data: data){
-                                 DispatchQueue.main.async {
-                                     self.postImage.image = image
-                                     //self.setNeedsLayout()
-                                 }
-                                 
-                             }
-                         }
-                         
-                     }
-                }
-
-            }
+            postImage.image = UIImage(named: "Placeholder")
             
-            //titleLabel.text = post.title
+                let postsImage = post.image
+               if let crestPath = URL(string: postsImage) {
+                                   DispatchQueue.global().async {
+                                       let data = try? Data(contentsOf: crestPath)
+                                       if let data = data {
+                                        //print(data)
+                                           if  let image: UIImage = UIImage(data: data){
+                                            
+                                               DispatchQueue.main.async {
+                                                   self.postImage.image = image
+                                                   self.setNeedsLayout()
+                                               }
+                                               
+                                           }
+                                       }
+                                   }
+                                   }
+    
+
+          
+            
+            titleLabel.text = post.title
 
         }
     }

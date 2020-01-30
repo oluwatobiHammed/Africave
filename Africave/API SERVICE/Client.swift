@@ -22,6 +22,8 @@ class  Client {
         case signup
         case getPost
         case getSinglePost
+        case hashtagPost
+        case createNewPost
 
         
         var stringValue: String {
@@ -32,10 +34,15 @@ class  Client {
             case .login:
                 return "https://ios-test-january-2020.africave.co/api/v1/login"
             case .getPost:
-                return "https://ios-test-january-2020.africave.co/api/v1/posts"
+                return "https://ios-test-january-2020.africave.co/api/v1/posts?limit=2&offset=0"
             case .getSinglePost:
                 return "https://ios-test-january-2020.africave.co/api/v1/posts/1"
-     
+            case .hashtagPost:
+                return "https://ios-test-january-2020.africave.co/api/v1/explore/ios?limit=2&offset=0"
+                
+            case .createNewPost:
+                return "https://ios-test-january-2020.africave.co/api/v1/posts"
+       
             }
         }
         
@@ -121,7 +128,8 @@ class  Client {
         let body = SignUpRequest(username: username, email: email, password: password)
         taskForPOSTRequest(url: Endpoints.signup.url, responseType: SignUpResponse.self, body: body) { response, error in
             if let response = response {
-                print(response.token)
+                 Auth.requestToken = response.token
+                //print(response.token)
                 completion(true, nil)
             } else {
                 completion(false, error)
@@ -134,7 +142,7 @@ class  Client {
         taskForPOSTRequest(url: Endpoints.login.url, responseType: SignInResponse.self, body: body) { response, error in
             if let response = response {
                 Auth.requestToken = response.token
-                print(Auth.requestToken)
+                //print(Auth.requestToken)
                 completion(true, nil)
             } else {
                 completion(false, error)
@@ -146,26 +154,52 @@ class  Client {
     class func getPost(completion: @escaping ([Post], Error?) -> Void) {
           taskForGETRequest(url: Endpoints.getPost.url, responseType: Postresults.self) { response, error in
               if let response = response {
-                print(response.posts)
+                //print(response.posts)
                 completion(response.posts, nil)
               } else {
-                print(error!)
+                //print(error!)
                   completion([], error)
               }
           }
       }
     
-    class func getSinglePost(completion: @escaping (Bool, Error?) -> Void) {
-          taskForGETRequest(url: Endpoints.getPost.url, responseType: Post.self) { response, error in
+    class func getSinglePost(completion: @escaping ([Post], Error?) -> Void) {
+          taskForGETRequest(url: Endpoints.getSinglePost.url, responseType: SInglePost.self) { response, error in
               if let response = response {
-                print(response)
-                completion(true, nil)
+                print(response.posts)
+                completion([response.posts], nil)
               } else {
+                
+                completion([], error)
                 print(error!)
-                  completion(false, error)
               }
           }
       }
+    
+    class func hashtagPost(completion: @escaping ([Post], Error?) -> Void) {
+          taskForGETRequest(url: Endpoints.hashtagPost.url, responseType: Postresults.self) { response, error in
+              if let response = response {
+                //print(response)
+                completion(response.posts, nil)
+                } else {
+                print(error!)
+                completion([], error)
+                }
+          }
+      }
+
+    class func createNewPost(title: String, description: String, hashtags: String, completion: @escaping (Bool, Error?) -> Void) {
+     let body = CreatePostResquest(title: title, description: description, hashtags: hashtags)
+     taskForPOSTRequest(url: Endpoints.createNewPost.url, responseType: SignInResponse.self, body: body) { response, error in
+         if let response = response {
+             Auth.requestToken = response.token
+             //print(Auth.requestToken)
+             completion(true, nil)
+         } else {
+             completion(false, error)
+         }
+     }
+ }
 
 
 }

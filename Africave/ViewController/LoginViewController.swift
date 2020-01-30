@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,6 +52,7 @@ class LoginViewController: UIViewController {
         
         // Hide the Error Label
         errorLabel.alpha = 0
+        activityIndicator.alpha = 0
         
         // Style the element
         Utilities.styleTextField(emailTextField)
@@ -63,7 +65,7 @@ class LoginViewController: UIViewController {
 
  
     @IBAction func signInTapped(_ sender: UIButton) {
-        
+        setLoggingIn(true)
         // Validate the Fields
            let error = valideteFields()
         
@@ -114,6 +116,17 @@ class LoginViewController: UIViewController {
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
     }
-    
+    func setLoggingIn(_ loggingIn: Bool) {
+        activityIndicator.alpha = 1
+        if loggingIn {
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
+        }
+        emailTextField.isEnabled = !loggingIn
+        passwordTextField.isEnabled = !loggingIn
+        signInButton.isEnabled = !loggingIn
+     
+    }
 
 }
